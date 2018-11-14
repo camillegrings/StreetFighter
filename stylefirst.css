@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagem{
+    width: 80%;
+    height: 500px;
+    background: url('ryu.gif');
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.logo{
+    width: 220px;
+    height: 120px;
+    background: url('logo.png');
+    background-size: cover;
+}
+
+.start a div{
+    margin-top:30px;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+    font-family: 'VT323', monospace;
+    animation: piscar 1s linear infinite;
+}
+
+.start a {
+    text-decoration: none;
+}
+
+.start{
+    width: 200px;
+    height: 100px;
+}
+
+@keyframes piscar{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

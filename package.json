@@ -1,0 +1,18 @@
+{
+  "name": "exerciciocasa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node hulkbuster.js && parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assets": "^3.0.0",
+    "ncp": "^2.0.0",
+    "parcel": "^1.8.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}

@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-size: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header{
+    width: 40%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    width: 60%;
+    flex: 1;
+    opacity: 0;
+    animation: fadein 1s linear forwards;
+    animation-delay: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo{
+    background: url("assets/images/logo.png");
+    background-size: 100%;
+    width: 300px;
+    height: 85px;
+    animation: girar 1s linear forwards, aumentarTamanho 1s linear forwards, piscar 1s linear 2s;
+}
+
+.listaPersonagens{
+    width: 37%;
+    height: 125px;
+    /* background: purple; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.informacoesPersonagem{
+    flex: 1;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.listaPersonagens button{
+    width: 55px;
+    height: 63px;
+    border: 2px solid #ffde00;
+    outline: none;
+    filter: grayscale(100%);
+    margin: -1px -2px 0 -2px;
+    position: relative;
+}
+
+.active{
+    filter: grayscale(0);
+    animation: piscar 1s linear forwards;
+    outline: none;
+}
+
+.nomePersonagem{
+    background:  rgba(255, 0, 0, 0.5);
+    color: white;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    margin-left: -6px;
+    display: none;
+}
+
+.show {
+    display: block;
+  }
+
+.foto{
+    width: 500px;
+    height: 300px;
+    margin-left: 150px;
+}
+
+#fotoPersonagem{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(8px 5px 0px black);
+}
+
+.slide {
+    animation: slideInLeft 1s linear;
+}
+
+.infomacoes{
+    width: 650px;
+    height: 250px;
+    margin-left: 15px;
+    margin-top:60px;
+}
+
+.infomacoes p .label{
+    background: #ffde00;
+    border-radius: 5px;
+    padding: 7px 10px 7px 10px;
+    font-size: 12px;
+    margin-right: 5px;
+    font-weight: bold;
+    color:rgb(68, 68, 68);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing:0.5px; 
+}
+
+.valor{
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    font-size:15px;
+}
+
+.habilita{
+    background: black;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    animation: slideinout 2s linear forwards;
+}
+
+.nome{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    margin: 0;
+    color:white;
+    text-shadow: 0.1em 0.01em black;
+}
+
+.hide{
+    display: none;
+}
+
+/*personagens*/
+.ryu{
+    background-image: url('assets/images/characters/ryu_headshot.jpg');
+    background-size: cover;
+}
+
+.ken{
+    background-image: url('assets/images/characters/ken_headshot.jpg');
+    background-size: cover;
+}
+
+.chun-li{
+    background-image: url('assets/images/characters/chun_li_headshot.jpg');
+    background-size: cover;
+}
+
+.dee-jay{
+    background-image: url('assets/images/characters/dj_headshot.jpg');
+    background-size: cover;
+}
+
+.cammy{
+    background-image: url('assets/images/characters/cammy_headshot.jpg');
+    background-size: cover;
+}
+
+.sagat{
+    background-image: url('assets/images/characters/sagat_headshot.jpg');
+    background-size: cover;
+}
+
+.zangief{
+    background-image: url('assets/images/characters/zangief_headshot.jpg');
+    background-size: cover;
+}
+
+.akuma{
+    background-image: url('assets/images/characters/akuma_headshot.jpg');
+    background-size: cover;
+}
+
+.blanka{
+    background-image: url('assets/images/characters/blanka_headshot.jpg');
+    background-size: cover;
+}
+
+.silvio{
+    background-image: url('assets/images/characters/silvio_headshot.png');
+    background-size: cover;
+}
+
+.disable{
+    background: black;
+}
+
+/*fundos personalizados para personagens*/
+.fundo-jp {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to top, rgba(218, 37, 9, 0.7), rgba(0, 0, 0, 0.8)), url("assets/images/jp.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} 
+
+.fundo-us {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to top, rgba(47, 9, 218, 0.7), rgba(0, 0, 0, 0.8)), url("assets/images/us.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fundo-cn {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to top, rgba(218, 37, 9, 0.7), rgba(0, 0, 0, 0.8)), url("assets/images/cn.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fundo-jm {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to top, rgba(226, 95, 8, 0.7), rgba(0, 0, 0, 0.8)), url("assets/images/jm.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fundo-gb {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to top, rgba(218, 37, 9, 0.7), rgba(0, 0, 0, 0.8)), url("assets/images/gb.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fundo-th {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to top, rgba(218, 37, 9, 0.7), rgba(0, 0, 0, 0.8)), url("assets/images/th.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fundo-ru {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to top, rgba(9, 12, 218, 0.7), rgba(0, 0, 0, 0.8)), url("assets/images/ru.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fundo-br {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to top, rgba(9, 218, 37, 0.7), rgba(0, 0, 0, 0.8)), url("assets/images/br.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*animações*/
+@keyframes girar{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes aumentarTamanho{
+    from{
+        width: 0px;
+        height: 0px;
+    }
+    to{
+        width: 175px;
+        height: 85px;
+    }
+}
+
+@keyframes piscar{
+    0%{
+        filter:brightness(100%);
+    }
+    25%{
+        filter:brightness(250%);
+    }
+    50%{
+        filter:brightness(100%);
+    }
+    75%{
+        filter:brightness(250%);
+    }
+    100%{
+        filter:brightness(100%);
+    }
+}
+
+@keyframes fadein{
+   to{ 
+        opacity: 1; 
+    } 
+
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-20%);
+        filter: drop-shadow(8px 5px 0px white);
+    }
+    25%{
+        filter: drop-shadow(10px 8px 0px black);
+    }
+    50%{
+        filter: drop-shadow(10px 8px 0px black);
+    }
+    75%{
+        filter: drop-shadow(10px 8px 0px black);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideinout {
+    0% {
+      top:-50px;
+    }
+    25% {
+      top:0;
+    }
+    50% {
+      top:0;
+    }
+    75% {
+      top:0;
+    }
+    100%{
+      top:-50px;
+    }
+}
+
+/* @keyframes slideout {
+    from {
+      top:0px;
+    }
+  
+    to {
+      top:-50px;
+    }
+} */
